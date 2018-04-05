@@ -1,3 +1,4 @@
+var equipos;
 
 $("#listaDeEquipos").hide();
 
@@ -9,8 +10,9 @@ $(function(){
         $("#listarEquipos").click(function(){
             $("#carouselNews").hide();
            $.get("json/equipos.json",function(data){
+               equipos=JSON.parse(data);
                for(i=0;i<data.length;i++){
-                $("#listaDeEquipos").append($("<li></li>").text(data[i].nombre));
+                $("#listaDeEquipos").append($("<li></li>").text(equipos[i].nombre));
                }
 
                $("#listaDeEquipos").show();
