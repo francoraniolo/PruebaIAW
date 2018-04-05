@@ -9,11 +9,14 @@ $(function(){
         $("#listarEquipos").click(function(){
             $("#carouselNews").hide();
             $.get("json/equipos.json",function(data){
-                alert(data[0].nombre);
-        });
-            
+               for(i=0;i<data.length;i++){
+                $("#listaDeEquipos").append($("<li></li>").text(data[i].nombre));
+               }
 
+               $("listaDeEquipos").show();
+        });     
  });
 
+       
 
 });
