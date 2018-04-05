@@ -1,5 +1,4 @@
 
-
 $("#listaDeEquipos").hide();
 
 $(function(){
@@ -21,3 +20,5 @@ $(function(){
        
 
 });
+
+
