@@ -9,7 +9,7 @@ $(function(){
     
         $("#listarEquipos").click(function(){
             $("#carouselNews").hide();
-            if(!equiposAbierto){
+            if(equiposAbierto==false){
            $.get("json/equipos.json",function(data){
                for(i=0;i<data.length;i++){
                 $("#listaDeEquipos").append($("<tr></tr>").text(data[i].nombre));
